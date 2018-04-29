@@ -144,10 +144,10 @@ fbh = (fa1*(d1_zup/2)+fr1*90)/180
 print('fbh:', fbh)
 fah=((fr1*90)-(fa1*(d1_zup/2)))/180
 print('fah:', fah)
-
 #V - RAVAN 
 
 fav = ft1/2
+fbv = fav
 fa = math.sqrt(fbh**2+fbv**2)
 fb = math.sqrt(fbh**2+fbv**2)
 
@@ -162,7 +162,7 @@ print('ms1hc2:', ms1hc2)
 sigmasd = 54
 tud = 57
 alfao = 0.965
-ms1l = math.sqrt(ms1vc**2 + mas1hc1**2)
+ms1l = math.sqrt(ms1vc**2 + ms1hc1**2)
 
 mil = math.sqrt((ms1l**2+0.965/2)*t1) 
 print('ms1l:', ms1l)
@@ -181,6 +181,7 @@ print('d1_vrat1:', d1_vrat1)
 print("\n3. Proracun za vezu sa zupcanikom za d=60mm\n")
 t3 = 6.8
 print('t3:', t3)
+h=11
 t_1 = h-t3
 ft_3 =  (2*t1*ka)/60
 p = ft_3/(72*t_1)
@@ -191,12 +192,47 @@ betak = 2.17
 ksi1 = 0.9 
 ksi2 = 0.74 
 ksi2u = 0.66 
-sigmasd_2 = ms
+
 w = 14774.56 
 wp = 29549.12
 taud_2 = t1/wp 
-ssigma = 220*0.9*0.74/2.17*
+sigmasd_2 = ms1l/w
+ssigma = 220*0.9*0.74/(2.17*sigmasd_2)
+stau = (170*0.9*0.66)/(betak*taud_2)
+s_2 = (ssigma*stau)/math.sqrt(ssigma**2+stau**2)
+print('w:', w)
+print('wp:', wp)
+print('taud_2:', taud_2)
+print('sigmasd_2:', sigmasd_2)
+print('ssigma:', ssigma)
+print('stau:', stau)
+print('s_2:', s_2)
 
+print("\nPRORACUN VRATILA 2")
+
+fdh = (fr1*90-fa1*d1_neb)/180 #fa1*d1_zup daje dobar rezultat a to ne bi trebalo da je tako
+print(fa1)
+print(fr1)
+print((fr1*90-fa1*(60/2)))
+print('fdh:', fdh)
+
+#fch*180-fa2*d2/2-fr2*90
+
+fch = (-fa1*(d1_neb)-fr1*90)/180
+fch = fch*(-1)
+print('fch:', fch)
+#print(ft_3)
+print(ft1)
+#print(ft)
+fcv = ft1/2
+print('fcv:', fcv)
+fdv = fcv
+fcr = math.sqrt(fcv**2+fch**2)
+fdr = math.sqrt(fdv**2+fdh**2)
+print('fcr:', fcr)
+print('fdr:', fdr)
+
+print("\n MOMENT SAVIJANJA NA VRATILU 2")
 
 
 
