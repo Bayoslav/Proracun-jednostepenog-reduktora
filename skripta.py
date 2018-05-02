@@ -232,10 +232,33 @@ fdr = math.sqrt(fdv**2+fdh**2)
 print('fcr:', fcr)
 print('fdr:', fdr)
 
-print("\n MOMENT SAVIJANJA NA VRATILU 2")
+print("\n MOMENT SAVIJANJA NA VRATILU 2\n")
+msl2v = fcv*90
+msl2h = fch*90
+msd2h = fdh*90
+msl2 = math.sqrt(msl2v**2+msl2h**2)
+msld = math.sqrt(msl2v**2+msd2h**2)
+#mil2 = 
+mil2 = math.sqrt((msl2**2+0.965/2)*t1) 
 
+dis = ((16*t1)/(math.pi*tud))**(1/3)
+print('msl2v:', msl2v)
+print('msl2h:', msl2h)
+print('msd2h:', msd2h)
+print('msl2:', msl2)
+print('msld:', msld)
+print('mil2:', mil2)
+print('dis:', dis)
+print('t1:', t1)
+dil_2 = ((32*mil2)/(math.pi*sigmasd))**(1/3)
+ds_2 = 1.1*dis
+dl = 1.2*dis
+d_2_2vratilo = 1.2*dil 
 
-
+print('dil_2:', dil_2)
+print('ds_2:', ds_2)
+print('dl:', dl)
+print('d_2_2vratilo:', d_2_2vratilo)
 
 
 
