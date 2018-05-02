@@ -3,11 +3,11 @@
         <style>
             #kek { 
                 text-align : center;
-
+                font-family : 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
             }
         </style> 
         <body>
-            <form method="POST">
+            <form method="POST" id="kek">
             {% csrf_token %}
             {% for field in form %} 
                 <br> 
