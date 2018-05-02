@@ -1,20 +1,20 @@
 import math
 
 #snaga - p
-'''
 p = (int(input("Unesi snagu(kW): ")))
 n = (int(input("Br obrtaja pogonskog zupc. : ")))
 i = (float(input("Prenosni odnos: ")))
 z1 = (int(input("z1: ")))
 
 
-cofx = (int(input("x: ")))
+
 ka = (float(input("Ka: ")))
 beta = (int(input("beta: ")))
 #Proracun zupcanika
 fi = (float(input("faktor sirine zupc. : ")))
-'''
+x =(int(input("x: ")))
 
+'''
 p=40 
 n=500
 i=2.2
@@ -22,7 +22,7 @@ z1=20
 beta = 5
 fi = 0.5
 ka=1.55
-x=0
+x=0'''
 w = (math.pi*n)/30
 t1 = int((p/w)*1000*1000)
 print(t1)
