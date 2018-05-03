@@ -259,7 +259,7 @@ class Index(View):
         dic['ds_2']= ds_2
         dic['dl']= dl
         dic['d_2_2vratilo']= d_2_2vratilo
-
+        print(dic)
         return render(request,'index.html',{
         'dic' : dic})
         #pass
