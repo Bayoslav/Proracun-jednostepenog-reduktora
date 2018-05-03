@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.views import View
 from procapp.forms import ProcForm
+from collections import OrderedDict	
 # Create your views here.
 import math
 class Index(View):
@@ -14,7 +15,7 @@ class Index(View):
         #dic[form)
         #dic[request.POST)
         #dic[dir(request.POST))
-        dic = {}
+        dic = OrderedDict()
         p =  int(request.POST.get('p'))
         n =  int(request.POST.get('n'))
         i =  float(request.POST.get('i'))
