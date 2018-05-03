@@ -97,17 +97,17 @@ class Index(View):
         dic['pb']= pb
         qα = math.sqrt(ra1**2-rb1**2)+math.sqrt(ra2**2-rb2**2)-a*math.sin(math.radians(αt))
         dic['qα']= qα
-        etaα = qα/pb 
-        dic['etaα']= etaα
-        etaβ = b1*math.tan(math.radians(β))/pb 
-        dic['etaβ']= etaβ
-        eta = etaα+etaβ 
-        dic['eta']= eta
+        εα = qα/pb 
+        dic['εα']= εα
+        εβ = b1*math.tan(math.radians(β))/pb 
+        dic['εβ']= εβ
+        ε = εα+εβ 
+        dic['ε']= ε
         #1b
 
-        ye = 0.25 + (0.75/etaα)
+        ye = 0.25 + (0.75/εα)
         dic['ye']= ye
-        yb = 1-etaβ-β/120
+        yb = 1-εβ-β/120
         yfa=2.91 
         ysa = 1.65
         ft = (2*t1)/d1_zup
@@ -131,7 +131,7 @@ class Index(View):
         dic['w2']= w2
 
         #B PRORACUN VRATILA 
-        print("\nPRORACUN VRATILA\n")
+        dic['text'] = "\nPRORACUN VRATILA\n"
 
         ft1 = ((2*t1)/d1_zup)*ka
         dic['ft1']= ft1
@@ -152,8 +152,8 @@ class Index(View):
         fa = math.sqrt(fbh**2+fbv**2)
         fb = math.sqrt(fbh**2+fbv**2)
 
-        print("\nMOMENTI SAVIJANJA NA VRATILU 1")
-
+        #print()
+        dic['text2'] = "\nMOMENTI SAVIJANJA NA VRATILU 1"
         ms1vc = -fav*90
         dic['Ms1vc']= ms1vc
         ms1hc1 = -fah*90
@@ -179,7 +179,7 @@ class Index(View):
         dic['da']= da
         dic['d1_vrat1']= d1_vrat1
 
-        print("\n3. Proracun za vezu sa zupcanikom za d=60mm\n")
+        dic['text3'] = "\n3. Proracun za vezu sa zupcanikom za d=60mm\n"
         t3 = 6.8
         dic['t3']= t3
         h=11
@@ -209,8 +209,8 @@ class Index(View):
         dic['sτ']= sτ
         dic['s_2']= s_2
 
-        print("\nPRORACUN VRATILA 2")
-
+        #print()
+        dic['text4'] = "\nPRORACUN VRATILA 2"
         fdh = (fr1*90-fa1*d1_neb)/180 #fa1*d1_zup daje dobar rezultat a to ne bi trebalo da je tako
         dic["fa1"] =fa1
         dic["fr1"] = fr1
@@ -232,7 +232,7 @@ class Index(View):
         dic['fcr']= fcr
         dic['fdr']= fdr
 
-        print("\n MOMENT SAVIJANJA NA VRATILU 2\n")
+        dic['text5'] = ("\n MOMENT SAVIJANJA NA VRATILU 2\n")
         msl2v = fcv*90
         msl2h = fch*90
         msd2h = fdh*90

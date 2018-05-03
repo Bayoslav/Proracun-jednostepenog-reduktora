@@ -1,11 +1,14 @@
 <html>
     <head>
+        
         <style>
             #kek { 
                 text-align : center;
                 font-family : 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                
             }
         </style> 
+      
         <body>
             <form method="POST" id="kek">
             {% csrf_token %}
@@ -13,18 +16,19 @@
             <br> 
                 {{ field.label }}
                 {{ field }}
-                <br> 
+            <br> 
 
             {% endfor %}
-            
-            <button type='submit'>Posalji</button>
+            <br>
+            <button type='submit' item-width="230px">Posalji</button>
          
         </form>
             {% for key,value in dic.items %}
             <h4 id="kek">{{ key }} = {{ value }} </h4>
+            <br> 
             {% endfor %}
         </body>
-
+   
     </head>
 
 
