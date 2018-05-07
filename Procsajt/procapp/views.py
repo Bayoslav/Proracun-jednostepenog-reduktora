@@ -195,14 +195,14 @@ class Index(View):
         ksi2 = 0.74 
         ksi2u = 0.66 
 
-        w = 14774.56 
+        w3 = 14774.56 
         wp = 29549.12
         τd_2 = t1/wp 
         σsd_2 = ms1l/w
         sσ = 220*0.9*0.74/(2.17*σsd_2)
         sτ = (170*0.9*0.66)/(βk*τd_2)
         s_2 = (sσ*sτ)/math.sqrt(sσ**2+sτ**2)
-        dic['w']= w
+        dic['w3']= w3
         dic['wp']= wp
         dic['τd_2']= τd_2
         dic['σsd_2']= σsd_2
