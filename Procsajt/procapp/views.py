@@ -169,7 +169,7 @@ class Index(View):
         mil = math.sqrt((ms1l**2+0.965/2)*t1) 
         dic['Ms1l']= ms1l
         dic['mil']= mil
-        dia = ((16*t1)/(math.pi*tud))**(1/8)
+        dia = ((16*t1)/(math.pi*tud))**(1/3)
         dil = ((32*mil)/(math.pi*σsd))**(1/3)
         ds = 1.1 * dia 
         da = 1.2*dia 
@@ -198,7 +198,7 @@ class Index(View):
         w3 = 14774.56 
         wp = 29549.12
         τd_2 = t1/wp 
-        σsd_2 = ms1l/w
+        σsd_2 = ms1l/w3
         sσ = 220*0.9*0.74/(2.17*σsd_2)
         sτ = (170*0.9*0.66)/(βk*τd_2)
         s_2 = (sσ*sτ)/math.sqrt(sσ**2+sτ**2)
